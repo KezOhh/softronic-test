@@ -8,23 +8,81 @@ namespace Api.Controllers
     [Route("items")]
     public class ItemsController : ControllerBase
     {
+        private readonly IItemsService _itemsService;
 
-        public ItemsController()
+        public ItemsController(IItemsService itemsService)
         {
+            _itemsService = itemsService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ItemDto>>> Get()
         {
-            // TODO: Return items fetched from external API
-            return Array.Empty<ItemDto>();
+            try
+            {
+                var items = await _itemsService.GetItems();
+
+                if (items.Count() == 0)
+                    return BadRequest("No items found. Try again");
+
+                return Ok(items);
+            }
+            catch (HttpRequestException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<ItemDto>>> Post([FromForm]string[] items)
+        public async Task<ActionResult<IEnumerable<ItemDto>>> Post([FromForm] string[] items)
         {
-            // TODO: Return a list of the items selected based on the "items" array posted from the frontend
-            return Array.Empty<ItemDto>();
+            try
+            {
+                var res = await _itemsService.GetItems();
+
+                if (res.Count() == 0)
+                    return BadRequest("Not matching items found. Try again");
+
+                // NOTE: Im not sure if the Azure Function is set up to accept POST calls. I only managed to get 404 Not Found when posting objects to it.
+                // Therefore i made this workaround where I fetch all items and filter the array based on the input. I realised this after I implemented
+                // everything on the backend so I just left it for you to have a look at.
+
+                return Ok(res.Where(res => items.Contains(res.Id)));
+            }
+            catch (HttpRequestException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
+
+        //[HttpPost]
+        //public async Task<ActionResult<IEnumerable<ItemDto>>> Post([FromForm] string[] items)
+        //{
+        //    try
+        //    {
+        //        var res = await _itemsService.GetItems(items);
+
+        //        if (res.Count() == 0)
+        //            return BadRequest("No items found. Try again");
+
+        //        return Ok(res);
+        //    }
+        //    catch (HttpRequestException ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, ex.Message);
+        //    }
+        //}
     }
 }

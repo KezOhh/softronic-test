@@ -1,6 +1,4 @@
 using Api.Domain;
-using Api.Models;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
+
+builder.Services.AddScoped<BaseService>();
+builder.Services.AddScoped<IItemsService, ItemService>();
 
 var app = builder.Build();
 

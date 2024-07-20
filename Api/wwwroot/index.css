@@ -92,3 +92,29 @@ form > button {
   margin-left: auto;
   cursor: pointer;
 }
+
+.returned-items {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.returned-items h2 {
+  margin-top: 0;
+}
+
+.returned-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.returned-items ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.returned-items ul li:last-child {
+  border-bottom: none;
+}

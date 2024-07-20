@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/Hr8gm93kDtbr6P5BTIxz8Mu65aiFJ7E/bHOnS/bnao=",
+  "Hash": "Aj/Bnd47RDL11BkcU8BLCGBWLO+MeF3lm86qMiMxe3M=",
   "Source": "Api",
   "BasePath": "_content/Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Api\\wwwroot",
       "Source": "Api",
-      "ContentRoot": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\favicon.svg",
+      "Identity": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\favicon.svg",
       "SourceId": "Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "RelativePath": "favicon.svg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.svg"
     },
     {
-      "Identity": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\index.css",
+      "Identity": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\index.css",
       "SourceId": "Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "RelativePath": "index.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\index.css"
     },
     {
-      "Identity": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\index.html",
       "SourceId": "Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\index.js",
+      "Identity": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\index.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MARSOD\\Documents\\Code\\core\\intervju-test\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joel-\\dev\\softronic\\softronic-test\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "RelativePath": "index.js",
       "AssetKind": "All",
